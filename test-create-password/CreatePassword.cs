@@ -20,7 +20,7 @@ namespace test_create_password
         private string upperCaseAllowed = string.Empty;
         private string lowerCaseAllowed = string.Empty;
         private string specialCharacterAllowed = string.Empty;
-        private bool anyValidInput = false;
+        public bool anyValidInput = false;
         private List<string> password = new List<string>();
         private string finalPassword = string.Empty;
 
@@ -33,6 +33,7 @@ namespace test_create_password
         private static string validityConsoleMessage = "Please enter a valid input. One of the following characters 'Y', 'y', 'n', 'N' are considered valid only.";
         private static string validityLengthConsoleMessage = "Please enter a valid input. The length should be greater than 1.Please try Again.";
         private static string wellcomeTitle = "Wellcome to the BESTPASSWORDMANAGER";
+        private static string anyValidInputMessage = "You should reply 'yes' or 'y' to the one of the previous selection type questions, otherwise no password will be created!!! Please try again";
         private static Random random = new Random();
         private static List<string> numberList = new List<string>() { "0","1","2","3","4","5","6","7","8","9"};
         private static List<string> lowerCaseList = new List<string>(){ "a", "b", "c", "d","e","f","g","h", "i", "j",  "k", "l", "m","n","o","p", "q","r", "s","t", "u", "v","w","x","y","z"};
@@ -184,7 +185,7 @@ namespace test_create_password
             }
             else
             {
-                Console.WriteLine("You should select at least one of avaliable the options.");
+                Console.WriteLine(anyValidInputMessage);
             }
            
 
